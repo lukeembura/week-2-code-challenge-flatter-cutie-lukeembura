@@ -16,3 +16,13 @@ fetch("/characters")
     characterBar.appendChild(span);
   });
 });
+// Display character details in the detailed-info div
+function displayCharacterDetails(character) {
+  detailedInfo.innerHTML = `
+    <h2>${character.name}</h2>
+    <img src="${character.image}" alt="${character.name}">
+    <h4>Total Votes: <span id="vote-count">${character.votes}</span></h4>
+  `;
+  detailedInfo.dataset.characterId = character.id;
+  detailedInfo.dataset.votes = character.votes;
+}
