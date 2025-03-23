@@ -47,4 +47,9 @@ fetch(/characters/${characterId}, {
   },
   body: JSON.stringify({ votes: newVotes }),
 });
-);
+;
+// Handle reset votes button click
+resetVotesButton.addEventListener("click", () => {
+  const voteCount = document.getElementById("vote-count");
+  voteCount.textContent = 0;
+});
