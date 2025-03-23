@@ -62,4 +62,20 @@ resetVotesButton.addEventListener("click", () => {
      },
      body: JSON.stringify({ votes: 0 }),
    });
- 
+ // Handle new character form submission
+ characterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const nameInput = document.getElementById("name");
+  const imageInput = document.getElementById("image-url");
+
+  const newCharacter = {
+    name: nameInput.value,
+    image: imageInput.value,
+    votes: 0,
+  };
+});
+ // Add new character to the character bar
+ const span = document.createElement("span");
+ span.textContent = newCharacter.name;
+ span.addEventListener("click", () => displayCharacterDetails(newCharacter));
+ characterBar.appendChild(span);
