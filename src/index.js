@@ -53,3 +53,13 @@ resetVotesButton.addEventListener("click", () => {
   const voteCount = document.getElementById("vote-count");
   voteCount.textContent = 0;
 });
+   // Update votes on the server (Extra Bonus)
+   const characterId = detailedInfo.dataset.characterId;
+   fetch(/characters/${characterId}, {
+     method: "PATCH",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify({ votes: 0 }),
+   });
+ 
