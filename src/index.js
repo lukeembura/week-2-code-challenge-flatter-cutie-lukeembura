@@ -83,15 +83,7 @@ resetVotesButton.addEventListener("click", () => {
   // Display new character details
   displayCharacterDetails(newCharacter);
 
-  // Save new character to the server (Extra Bonus)
-  fetch("/characters", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newCharacter),
-  });
-
+  
   // Clear form inputs
   nameInput.value = "";
   imageInput.value = "";
