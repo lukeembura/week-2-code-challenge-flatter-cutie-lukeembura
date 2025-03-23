@@ -26,3 +26,14 @@ function displayCharacterDetails(character) {
   detailedInfo.dataset.characterId = character.id;
   detailedInfo.dataset.votes = character.votes;
 }
+// Handle votes form submission
+votesForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const votesInput = document.getElementById("votes");
+  const additionalVotes = parseInt(votesInput.value, 10) || 0;
+  const voteCount = document.getElementById("vote-count");
+  const currentVotes = parseInt(voteCount.textContent, 10);
+  const newVotes = currentVotes + additionalVotes;
+
+  voteCount.textContent = newVotes;
+  votesInput.value = "";
