@@ -32,11 +32,7 @@ Write your code in the `src/index.js` file. The base URL for your API will be
 
 ## Deliverables
 
-As a user, I can:
-
-1. See all characters names in a `div` with the id of `"character-bar"`. Create
-   a `span` tag with the character's name and add it the `div#character-bar`
-   once you have retrieved the character data from the server. You will need to
+you have retrieved the character data from the server. You will need to
    make a GET request to the following endpoint to retrieve the character data:
 
    ```txt
@@ -159,7 +155,11 @@ deliverables!**
 
     ----
 
-    Example Response: {
+    Example ResponAs a user, I can:
+
+1. See all characters names in a `div` with the id of `"character-bar"`. Create
+   a `span` tag with the character's name and add it the `div#character-bar`
+   once se: {
       "id": 6,
       "name": "Character Name",
       "image": "https://example.com/my-image.gif",
