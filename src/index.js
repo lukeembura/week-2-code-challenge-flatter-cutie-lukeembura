@@ -92,4 +92,7 @@ resetVotesButton.addEventListener("click", () => {
     body: JSON.stringify(newCharacter),
   });
 
-  
+  // Clear form inputs
+  nameInput.value = "";
+  imageInput.value = "";
+ 
