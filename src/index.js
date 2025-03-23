@@ -37,3 +37,14 @@ votesForm.addEventListener("submit", (event) => {
 
   voteCount.textContent = newVotes;
   votesInput.value = "";
+}
+// Update votes on the server (Extra Bonus)
+const characterId = detailedInfo.dataset.characterId;
+fetch(/characters/${characterId}, {
+  method: "PATCH",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ votes: newVotes }),
+});
+);
