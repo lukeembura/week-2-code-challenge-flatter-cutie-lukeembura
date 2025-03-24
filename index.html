@@ -9,11 +9,7 @@
     </div>
 
     <div id="character-bar">
-      <span>Mr. Cute</span>
-      <span>Mx. Monkey</span>
-      <span>Ms. Zebra</span>
-      <span>Dr. Lion</span>
-      <span>Mme. Panda</span>
+     
     </div>
 
     <div class="characterInfo">
@@ -21,8 +17,8 @@
         <h2 id="name"> </h2>
         <img
           id="image"
-          src="https://thumbs.gfycat.com/EquatorialIckyCat-max-1mb.gif"
-          alt="Mr. Cute"
+          src="assets/dummy.gif"
+          alt="Character"
         />
         <h4>Total Votes: <span id="vote-count">0</span></h4>
         <form id="votes-form">
@@ -32,6 +28,17 @@
         <button id="reset-votes">Reset Votes</button>
       </div>
     </div>
-    <script src="src/index.js"></script>
+
+    <!-- Add form for creating new characters -->
+    <div id="new-character">
+      <h3>Add a New Character</h3>
+      <form id="character-form">
+        <input type="text" id="name" placeholder="Character Name" required />
+        <input type="text" id="image-url" placeholder="Image URL" required />
+        <input type="submit" value="Add Character" />
+      </form>
+    </div>
+
+    <script src="src/index..js"></script>
   </body>
 </html>
